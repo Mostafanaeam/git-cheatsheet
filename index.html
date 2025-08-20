@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Commands Cheat Sheet</title>
+  <style>
+    html, body { margin:0; padding:0; background:#0b1220; color:#e6edf3; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .wrap { max-width: 900px; margin: 32px auto; padding: 24px; background:#0f1629; border:1px solid #1f2a44; border-radius:16px; }
+    h1 { font-size: 20px; margin: 0 0 16px 0; color:#a5b4fc; }
+    pre { overflow:auto; line-height:1.6; font-size: 14px; }
+    .muted { color:#7d8590; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>GitHub Commands Cheat Sheet 🐙</h1>
+    <pre><code># ================================================
+# GitHub Commands Cheat Sheet 🐙
+# ================================================
+
+# --- Setup &amp; Config ---
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --list
+
+# --- Starting a Repo ---
+git init                          # Start new local repo
+git clone &lt;url&gt;                      # Clone repo from GitHub
+
+# --- Basic Workflow ---
+git status                        # Check status
+git add &lt;file&gt;                       # Stage a file
+git add .                         # Stage all changes
+git commit -m "message"           # Commit staged changes
+git log                           # Show commit history
+
+# --- Branching ---
+git branch                        # List branches
+git branch &lt;name&gt;                    # Create new branch
+git checkout &lt;name&gt;                  # Switch to branch
+git checkout -b &lt;name&gt;               # Create + switch branch
+git merge &lt;branch&gt;                   # Merge branch into current
+git branch -d &lt;name&gt;                 # Delete branch
+
+# --- Remote (GitHub) ---
+git remote -v                     # Show remotes
+git remote add origin &lt;url&gt;          # Add remote origin
+git push -u origin main           # Push first time
+git push                          # Push changes
+git pull                          # Pull latest changes
+git fetch                         # Fetch branches/tags
+
+# --- Undo &amp; Fix ---
+git checkout -- &lt;file&gt;               # Discard changes (before staging)
+git reset HEAD &lt;file&gt;                # Unstage a file
+git reset --hard HEAD               # Reset to last commit (erases changes)
+git revert &lt;commit&gt;                  # New commit that undoes a commit
+
+# --- Stash ---
+git stash                         # Save uncommitted changes
+git stash pop                     # Reapply last stash
+git stash list                    # Show stashes
+
+# --- Tags ---
+git tag v1.0                      # Create tag
+git tag                           # List tags
+git push origin v1.0              # Push tag to GitHub
+</code></pre>
+    <p class="muted">Tip: open this file in your browser or print it as a quick reference.</p>
+  </div>
+</body>
+</html>
